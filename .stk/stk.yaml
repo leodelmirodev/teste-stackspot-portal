@@ -9,6 +9,7 @@ metadata:
   stack: spring-boot-rest-api-kotlin-stack@1.3.0
 spec:
   type: app
+  app-id: 01HMVWATFVEB9Q5RRPK1345PJE
   plugins:
     - name: 
         stackspot-lover-studio/spring-boot-rest-api-kotlin-stack@1.3.0/spring-boot-base-plugin@0.0.3

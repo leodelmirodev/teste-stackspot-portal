@@ -1,0 +1,55 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: teste-via-stackspot
+  description: "Testando Criação via Stackspot"
+  starter: 
+    stackspot-lover-studio/spring-boot-rest-api-kotlin-stack@1.3.0/spring-base-template
+  stack-version-id: 01HMVVRFRF8JAGN88G0T2033DX
+  stack: spring-boot-rest-api-kotlin-stack@1.3.0
+spec:
+  type: app
+  plugins:
+    - name: 
+        stackspot-lover-studio/spring-boot-rest-api-kotlin-stack@1.3.0/spring-boot-base-plugin@0.0.3
+      alias: spring-boot-base-plugin-1706037685236
+      plugin-version-id: 01HMS0734CJ8KQFXVDV7F3XB6A
+      stack-version-id: 01HMVVRFRF8JAGN88G0T2033DX
+      type: app
+      inputs:
+        project_name: Spring Base Project
+        description: Demo project for Stackspot
+        artifact_id: springbase
+        group_name: br.com.leodelmiro
+        springboot_version: 3.2.1
+        java_version: '17'
+        kotlin_version: 1.9.22
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: 
+        stackspot-lover-studio/spring-boot-rest-api-kotlin-stack@1.3.0/spring-boot-actuator-plugin@0.0.1
+      alias: spring-boot-actuator-plugin-1706037685247
+      plugin-version-id: 01HMVVPQQJFDGVM5PD01WJTC1K
+      stack-version-id: 01HMVVRFRF8JAGN88G0T2033DX
+      type: app
+      inputs:
+        actuator_endpoints:
+          - health
+          - metrics
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs:
+    main_class: SpringBaseProject
+    project_name_lower: springbase
+    project_base_package: br.com.leodelmiro.springbase
+    group_name_package: br/com/leodelmiro
+  repository: https://github.com/leodelmirodev/teste-stackspot-portal
